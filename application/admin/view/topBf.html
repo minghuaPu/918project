@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客户关系管理系统</title>
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__static/admin/css/common.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	
+</head>
+<body>
+	
+ <header style="background-color: #ccc">
+ 	<a href="">测试jQuery插件</a>
+ 	<div>管理员 退出</div>
+ </header>
+
+
+ <script type="text/javascript">
+		// jQuery.prototype
+		(function($){
+			$.fn.changeColor = function (color_val,fsize='60px') {
+				this.css('font-size',fsize)
+				this.css('color',color_val)
+				return this
+
+			}
+		}(jQuery))
+
+		var a = 2;
+		(function(){
+			var a = 1
+
+
+		}()) 
+		 
+		// $('a').css('color',"red")
+		$("a").changeColor('yellow').css('font-weight',900)
+	</script>

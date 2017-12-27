@@ -1,0 +1,48 @@
+{include file="top"}
+{include file="left_menu"}
+<div>
+	<div>
+		<a href="{:url('add')}" class="btn btn-primary">添加新闻</a>
+	</div>
+	<h2>新闻管理</h2>
+	<table class="table">
+		<tr>
+			<th>编号ID</th>
+			<th>新闻名称</th>
+			<th></th>
+			<th>操作</th>
+		</tr>
+		{foreach $news_list as $info}
+		<tr >
+			<td>{$info.id}</td>
+			<td>{$info.news_name}</td>
+			<td></td>
+			<td>
+				<a class="glyphicon glyphicon-pencil tooltip_mh" title="编辑"   data-placement="bottom" data-toggle="modal" href="#edit_modal"></a>
+
+				<a class="glyphicon glyphicon-remove tooltip_mh" title="删除"  data-placement="bottom"></a>
+			</td>
+		</tr>
+		{/foreach}
+	</table>
+	<div>{$news_list->render()}</div>
+</div>
+
+<div class="modal" id="edit_modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">编辑信息</div>
+			<div class="modal-body">
+				<form action="">
+					<input type="text"></form>
+			</div>
+			<div class="modal-footer">
+				<input type="button" class="btn btn-primary" value="编辑"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	// 使用jQuery插件的方法
+	$('.tooltip_mh').tooltip()
+</script>
+{include file="footer"}
