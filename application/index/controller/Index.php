@@ -8,7 +8,8 @@ class Index extends \think\Controller
         return $this->fetch();
     }
     public function show_news()
-    {
-    	// 张之栋大吃一餐66666
+    { 
+    	// 张之栋大吃一餐66666 22222
+ 
     }
 }
