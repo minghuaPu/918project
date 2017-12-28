@@ -9,6 +9,6 @@ class Index extends \think\Controller
     }
     public function show_news()
     {
-    	// 张之栋大吃一餐
+    	// 张之栋大吃一餐66666
     }
 }
